@@ -7,8 +7,18 @@
   </a>
 </p>
 
-# 내가 구현한 기능
+# ✅ 담당 역할 및 주요 기여
 자세한 코드 리뷰 - https://meadow-thorium-fd0.notion.site/20d1c83ebcd980fe8e88febc0d827c76?source=copy_link
+
+- **배포 책임자 역할**
+  - AWS EC2 서버 배포 및 운영 자동화 (GitHub Actions CI/CD 파이프라인 구축)
+  - 배포 과정 문제 해결 및 안정적인 서비스 운영 책임
+
+- **프로젝트 일정 및 관리**
+  - 노션(Notion)을 활용한 WBS(Work Breakdown Structure) 작성
+  - 간트차트 기반 프로젝트 일정 관리 및 팀원 업무 분배 조율
+  - 주간 회의 및 진행 상황 공유를 통한 일정 준수 및 리스크 관리
+
 
 <br>
 
