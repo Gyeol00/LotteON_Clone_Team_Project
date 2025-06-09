@@ -123,7 +123,8 @@ Controller → Service → Repository 구조에서 **6개 옵션 필드 완전 �
 <br><br>
 
 ## 4️⃣ 주문하기 – CartDTO 기반 통합 주문 흐름 (장바구니 & 바로 주문)
-![주문하기-롯데On (2)](https://github.com/user-attachments/assets/fee4ac1b-5ce1-453e-833a-b574221baf8f)
+![452868523-fee4ac1b-5ce1-453e-833a-b574221baf8f](https://github.com/user-attachments/assets/f59cbc4e-8066-474b-83ff-58c80eb320f4)
+
 
 
 롯데ON의 주문 기능은  
