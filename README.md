@@ -7,6 +7,13 @@
   </a>
 </p>
 
+# 아키텍처
+![슬라이드1 JPG](https://github.com/user-attachments/assets/5ac367b3-e47c-44de-9337-653d1b920985)
+
+# ERD
+![image](https://github.com/user-attachments/assets/4d6dfaa7-49f6-484d-a287-c2b79c438ba6)
+
+
 # ✅ 담당 역할 및 주요 기여
 자세한 코드 리뷰 - https://meadow-thorium-fd0.notion.site/20d1c83ebcd980fe8e88febc0d827c76?source=copy_link
 
