@@ -30,7 +30,8 @@
 <br>
 
 ## 1️⃣ 상품 목록 페이지 - Redis를 이용한 캐싱처리, Ajax 비동기처리로 SPA 구현
-![image](https://github.com/user-attachments/assets/d38636c9-7f40-4905-a302-a50d83dfb258)
+![452882317-d38636c9-7f40-4905-a302-a50d83dfb258](https://github.com/user-attachments/assets/f5a3ad96-5419-4a11-832a-75d0409277f7)
+
 
 롯데ON의 상품 목록 페이지는  
 **카테고리별 베스트 상품(최근 3개월 판매량 TOP10)** 과  
