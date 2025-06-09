@@ -1,145 +1,4 @@
-# 3차 프로젝트 - 롯데온 프로젝트 개요
-
-| 항목 | 내용 |
-| --- | --- |
-| **프로젝트 주제** | **롯데e-커머스 LOTTE ON 쇼핑몰** **개발** (Front Office, Back Office, API 서버) |
-| **프로젝트 기간** | 2025/04/14 ~ 2025/05/20 (24일, 192시간) |
-| **배경 및 목적** | 본 프로젝트는 쇼핑몰의 기본 기능 개발을 목표로 실제 업무와 유사한 환경에서 설계 및 구현을 함을 목표로 한다.
-| **배포 주소** | https://lotteon.store/ |
-| **깃허브** | https://github.com/greenlotte6/lotte1-lotteon-project-team2 |
-| **노션 코드리뷰** | https://fish-fahrenheit-662.notion.site/3-2044ffb4f47b8077815cebd4aa81672e?source=copy_link |
-
-## 아키텍처 및 서비스 정보
-![슬라이드1.JPG.png](https://github.com/user-attachments/assets/f4b11f38-3385-4749-b78f-3af00e3aee7f)
-
-
-| 유형 | 구분 | 서비스 정보 |
-| --- | --- | --- |
-| SW | OS | Window10 |
-|  | Browser | Chrome 137.0.7151.41 |
-|  | WAS | Apache Tomcat 10.1.39 |
-|  | Framework | Spring Boot 3.0.4 |
-|  | Language | Java 17 |
-|  | Front | HTML5, CSS3, JavaScript(ES6), jQuery 3.1 |
-|  | Library | mysql-connector-j - 8.3.0<br>querydsl-jpa - 5.1.0<br>commons-io - 2.14.0<br>thumbnailator - 0.4.14<br>spring-boot-starter-thymeleaf: 타임리프<br>spring-boot-starter-data-jpa : JPA<br>mybatis-spring-boot-starter:3.0.4 : mybatis<br>spring-boot-starter-data-redis : redis<br>spring-boot-starter-security : 스프링 시큐리티<br>spring-boot-starter-mail : 메일<br>thymeleaf-extras-springsecurity6 : 타임리프 문법<br>lombok : 롬복<br>org.modelmapper:modelmapper:3.2.2 : modelmapper<br>spring-boot-starter-oauth2-client : 소셜로그인<br>jasypt-spring-boot-starter:3.0.5 : 암호화 라이브러리 |
-|  | DBMS | MySQL 8.0<br>Redis 8.0.0 |
-|  | Tool | ntelliJ IDEA 2024.3.4.1<br>MySQL Workbench 8.0<br>HeidSQL 12.10<br>Git 2.47.1<br>Github<br>AWS |
-
-
----
-
-## ERD
-![image](https://github.com/user-attachments/assets/1603ea76-11ef-45f5-b52e-116cb11c5b27)
-
-
-## 상품 URI 구조
-```
-src/
-├── main/
-│   └── java/
-│       └── kr.co.lotteon/
-│           ├── controller/
-│           │   └── product/
-│           │       ├── ProductListController.java
-│           │       ├── ProductViewController.java
-│           │       ├── ProductCouponController.java
-│           │       ├── ProductCartController.java
-│           │       ├── ProductOrderController.java
-│           │       └── ProductOrderSubmitController.java
-│           ├── service/
-│           │   ├── product/
-│           │   │   ├── ProductListService.java
-│           │   │   ├── ProductViewService.java
-│           │   │   ├── ProductCouponService.java
-│           │   │   ├── ProductCartService.java
-│           │   │   ├── ProductOrderService.java
-│           │   │   ├── OrderTransactionService.java
-│           │   │   └── ProductOrderSubmitService.java
-│           │   └── kakao/
-│           │       └── KakaoPayService.java
-│           ├── repository/
-│           │   ├── impl/
-│           │   │   ├── ProductRepositoryImpl.java
-│           │   ├── order/
-│           │   │   ├── OrderRepository.java
-│           │   │   └── OrderItemRepository.java
-│           │   ├── product/
-│           │   │   └── ProductRepository.java
-│           │   ├── coupon/
-│           │   │   └── CouponIssueRepository.java
-│           │   ├── cart/
-│           │   │   └── CartRepository.java
-│           │   ├── point/
-│           │   │   └── PointRepository.java
-│           │   └── user/
-│           │       ├── UserRepository.java
-│           │       └── UserDetailsRepository.java
-│           ├── dto/
-│           │   ├── order/
-│           │   │   ├── OrderDTO.java
-│           │   │   └── OrderItemDTO.java
-│           │   ├── product/
-│           │   │   ├── ProductDTO.java
-│           │   │   └── ProductDetailDTO.java
-│           │   ├── coupon/
-│           │   │   ├── CouponDTO.java
-│           │   │   └── CouponIssueDTO.java
-│           │   ├── cart/
-│           │   │   └── CartDTO.java
-│           │   ├── point/
-│           │   │   └── PointDTO.java
-│           │   ├── page/
-│           │   │   ├── ItemRequestDTO.java
-│           │   │   ├── PageRequestDTO.java
-│           │   │   └── PageResponseDTO.java
-│           │   ├── kakao/
-│           │   │   ├── Amount.java
-│           │   │   ├── kakaoApporveResponse.java
-│           │   │   └── KakaoReadyResponse.java
-│           │   └── user/
-│           │        ├── UserDTO.java
-│           │        └── UserDetailsDTO.java
-│           └── entity/
-│               ├── order/
-│               │   ├── Order.java
-│               │   └── OrderItem.java
-│               ├── product/
-│               │   ├── Product.java
-│               │   └── ProductDetail.java
-│               ├── coupon/
-│               │   ├── Coupon.java
-│               │   └── CouponIssue.java
-│               ├── cart/
-│               │   └── Cart.java
-│               ├── point/
-│               │   └── Point.java
-│               └── user/
-│                   ├── User.java
-│                   └── UserDetails.java
-└── resources/
-    ├── templates/
-    │   └── product/
-    │       ├── list/
-    │       │   └── list.html
-    │       ├── view/
-    │       │   ├── view.html
-    │       │   ├── detail.html
-    │       │   ├── review.html
-    │       │   ├── qna.html
-    │       │   └── exchange.html
-    │       └── order/
-    │           ├── order.html
-    │           └── order_completed.html
-    └── static/
-        └── js/
-            └── product/
-                ├── list.js
-                ├── view.js
-                ├── cart.js
-                ├── order.js
-                └── order_completed.js
-
-```
+# 롯데온 상품 페이지 구현
 
 ## 시연 동영상 링크
 <p align="left">
@@ -148,12 +7,13 @@ src/
   </a>
 </p>
 
-<br><br><br><br>
-
 # 내가 구현한 기능
-자세한 코드 리뷰 - https://fish-fahrenheit-662.notion.site/3-2044ffb4f47b8077815cebd4aa81672e?source=copy_link
+자세한 코드 리뷰 - https://meadow-thorium-fd0.notion.site/20d1c83ebcd980fe8e88febc0d827c76?source=copy_link
+
+<br>
+
 ## 1️⃣ 상품 목록 페이지 - Redis를 이용한 캐싱처리, Ajax 비동기처리로 SPA 구현
-![롯데-ON-2조](https://github.com/user-attachments/assets/1959b35c-418d-4bc4-b29c-d1e4c5d9da84)
+![image](https://github.com/user-attachments/assets/d38636c9-7f40-4905-a302-a50d83dfb258)
 
 롯데ON의 상품 목록 페이지는  
 **카테고리별 베스트 상품(최근 3개월 판매량 TOP10)** 과  
@@ -306,20 +166,3 @@ DB와 세션을 상황에 맞게 활용하여 유연한 주문 흐름을 제공�
 - **외부 결제 API 호출 시점 명확화**, 결제 승인 성공 시에만 주문 상태 변경
 - 포인트, 쿠폰, 재고, 상태 변경 등을 **단일 책임 메서드로 분리**하여 유지보수성 향상
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-# LotteON_Product
